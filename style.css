@@ -1,0 +1,345 @@
+html, body {
+    padding:env(safe-area-inset);
+    overflow-x: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #474747;
+} 
+
+.primary-text {
+    color: #ff6b49;
+} 
+
+.secondary-text {
+    color: #5bbad5;
+} 
+
+.offset:before {
+    content:"";
+    height: 4rem;
+    display: block;
+    margin-top: -4rem;
+} 
+
+
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar {
+    background-color: #ff6b49;
+    padding: 0.7rem 1rem;
+    font-weight: 300;
+    letter-spacing: 0.025rem;
+    font-size: 0.9rem;
+    border: 2px solid rgba(241, 104, 74, 0.3); 
+    /* transition: background-color .5s ease; */
+} 
+
+.navbar-nav li {
+    padding-right: 0.8rem;
+} 
+
+.navbar-nav .nav-link {
+    color: #000000;
+    padding-top: 0.8rem;
+}
+
+.navbar .nav-link:active,
+.navbar .nav-link:hover {
+    color: white;
+}
+
+.navbar-nav button:hover,
+.main-content .btns:hover {
+    color: #000;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgba(255,255,255);
+}
+
+.custom-toggler-icon {
+    color: black;
+    font-size: 1.6rem;
+}
+
+.navbar.solid,
+.navbar.solid-toggle{
+    background: rgba(0, 0, 0, 0.7)!important;
+    /* transition: background-color 1s ease; */
+} 
+
+button:focus, a:focus, a.btn:focus {
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+button, a, a.btn, .svg-inline--fa {
+    transition: all .6s ease;
+}
+
+.btns {
+    /* margin-top: 0.3rem; */
+    padding-right: 2em;
+    padding-left: 2em;
+    background-color: #000;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+    word-spacing: 0.15em;
+    font-size: 0.8rem;
+    /* border-color: transparent; */
+}  
+
+.main-content .btns {
+    padding: 1em 2em;
+}
+
+.main-content{ 
+    /* background:url(https://infura.io/images/bg_arrows.svg);
+    background: url(img/bg-arrows.svg) 83px top repeat #ff6b4a;  */
+    background:url(img/bg-arrows.svg) #ff6b4a; 
+    color:#000;
+    background-attachment:fixed;
+    background-size: cover;
+    height: 100vh; 
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    }
+
+.main-content-text {
+    margin: 4rem 2rem;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 3.5rem;
+}
+
+.main-content h1,
+.main-content h4 {
+    letter-spacing: 0.05rem; 
+    text-shadow: 0.1rem 0.1rem 0.3rem #f05633;
+}
+
+h4 {
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+ .landing {
+     position: relative;
+     /* this is the wrapper, the fixed image is going to be fixed inside
+     of the relative wrapper which will scroll up with the rest of the page*/
+     width: 100%;
+     height: 100vh;
+     display: table;
+     /* display table to avoid some white space in mobile devices when scrolling at 
+     the end of the image */
+     z-index: -1;
+     /* the landing class parent element will always be behind the child element with 
+     the actual bg image */
+ }
+
+ .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    /* kind of background position */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* top and left 0 is so that the bg img covers all the corners in mobile devices */
+ }
+
+ /* landing page caption */
+ .caption {
+     z-index: 1;
+     position: absolute;
+     top: 38%;
+     /* z-index to make sure it displays on top of the bg img  */
+     /* 20% from top of the page */
+     width: 100%;
+     max-width: 100%;
+     /* so that text doesn't slide out when we shrink the screen  */
+ }
+
+ .services,
+ .services-examples {
+    padding: 0 1em; 
+  }
+
+  .services {
+    background-color: #f4f4f4;
+  }
+
+  .services-content,
+  .services-examples-content,
+  .technologies-content {
+    margin-top: 1.5rem;
+  }
+
+  .services-content h5,
+  .resources h5 {
+    font-weight: 400;
+    line-height: 2rem;
+  }
+
+  .services-content h2,
+  .services-examples-content h2,
+  .services h4 {
+      font-weight: 200;
+      color: #ff6b49;
+  }
+
+.fa-laptop-code {
+    color: #5bbad5;
+    font-size: 10rem;
+}
+
+.font-heading {
+    color: #ff6b4a;
+}
+
+.second-card-deck {
+    margin-top: 1.5rem;
+}
+
+.technologies {
+    /* background:url(https://infura.io/images/bg_arrows.svg); */
+    /* background:url(https:/infura.io/images/bg_arrows.svg) 83px top repeat #ff6b4a; */
+    background-color: #f4f4f4;
+    color:#000;
+    background-attachment:fixed;
+    background-size: cover;
+    /* height: 10%; */
+    /* margin-top: 100px; */
+    }
+
+.software .card {
+  /* background-color: #f4f4f4; */
+  /* height: 100px;
+  width: 150px; */
+  /* border: 2px solid red; */
+  height: 100px;
+  
+}
+.software img {
+  
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  /* border: 1px solid blue; */
+
+}
+
+
+    .footer {
+        color:rgba(255, 255, 255, .7);
+        background-color: black;
+        line-height: 1.5rem;
+        letter-spacing: .0625em;
+    }
+
+    .footer h5 {
+      font-weight: 300;
+    }
+
+    .footer input.btn {
+      background-color: #ff6b4a;
+      letter-spacing: 1px;
+    }
+
+    .footer input.btn:hover {
+      background-color: #f3451e;
+    }
+  
+    .newsletter-button {
+        background: black;
+        border: 1px solid gray;
+        word-spacing: 0.5em;
+        padding: 8px 15px;
+    }
+
+    .portfolio-item img:hover {
+        transform: scale(1.3);
+        cursor: zoom-in;
+    }
+
+    .portfolio-item img {
+        transition: transform .4s ease;
+    }
+
+    
+
+    .pricing-column {
+        height: 100%; 
+        /* maybe this is not needed. it is so that all cols are sam height */
+        padding: 1.6rem;
+        border-top: .25rem solid #1EBBA3;
+        box-shadow: 0 0 .8rem rgba(0, 0, 0, .075);
+        transition: transform .7s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pricing-column:hover {
+        transform: scale(1.1);
+    }
+
+    .ribbon h3 {
+        background-color: #6c757d;
+        color: white;
+        font-size: .8rem;
+        font-weight: 700;
+        height: 2rem;
+        width: 10rem;
+        padding-top: .5rem;
+        text-align: center;
+        position: absolute;
+        transform: rotate(45deg);
+        right: -2.8rem;
+        top: 1.2rem;
+        box-shadow: 0 0 .2rem rgba(0, 0, 0, .25);
+    }
+
+
+
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 992px (lg) */
+@media (max-width: 991.98px) {
+    
+ }
+ 
+ /* Devices under 768px (md) */
+ @media (max-width: 767.98px) {
+    
+ }
+ 
+ /* Devices under 576px (sm) */
+ @media (max-width: 575.98px) {
+    .services p,
+    .services-examples p {
+        font-size: 1.25rem;
+    }
+
+    .services .order-1 {
+        padding-bottom: 0;
+    }
+
+    .second-card-deck {
+        margin-top: 0;
+    }
+
+   
+ }
