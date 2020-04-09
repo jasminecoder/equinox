@@ -5,26 +5,26 @@ html, body {
     color: #474747;
 } 
 
-.primary-text {
+/* .primary-text {
     color: #ff6b49;
-} 
+}  */
 
-.secondary-text {
+/* .secondary-text {
     color: #5bbad5;
-} 
+}  */
 
-.offset:before {
+/* .offset:before {
     content:"";
     height: 4rem;
     display: block;
     margin-top: -4rem;
-} 
+}  */
 
 
 
-[class*="col-"] {
+/* [class*="col-"] {
     padding: 1rem;
-}
+} */
 
 .navbar-brand img {
     height: 2rem;
@@ -37,7 +37,7 @@ html, body {
     letter-spacing: 0.025rem;
     font-size: 0.9rem;
     border: 2px solid rgba(241, 104, 74, 0.3); 
-    /* transition: background-color .5s ease; */
+    transition: background-color .5s ease;
 } 
 
 .navbar-nav li {
@@ -108,24 +108,18 @@ button, a, a.btn, .svg-inline--fa {
     background-attachment:fixed;
     background-size: cover;
     height: 100vh; 
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     text-align: center;
     padding: 2rem;
     }
 
 .main-content-text {
-    margin: 4rem 2rem;
+    margin: 10rem 2rem;
 }
 
 h1 {
     font-weight: 200;
     font-size: 3.5rem;
-}
-
-.main-content h1,
-.main-content h4 {
-    letter-spacing: 0.05rem; 
-    text-shadow: 0.1rem 0.1rem 0.3rem #f05633;
 }
 
 h4 {
@@ -134,70 +128,84 @@ h4 {
     font-size: 1.5rem;
 }
 
- .landing {
-     position: relative;
-     /* this is the wrapper, the fixed image is going to be fixed inside
-     of the relative wrapper which will scroll up with the rest of the page*/
-     width: 100%;
-     height: 100vh;
-     display: table;
-     /* display table to avoid some white space in mobile devices when scrolling at 
-     the end of the image */
-     z-index: -1;
-     /* the landing class parent element will always be behind the child element with 
-     the actual bg image */
- }
+.main-content h1,
+.main-content h4 {
+    letter-spacing: 0.05rem; 
+    text-shadow: 0.1rem 0.1rem 0.3rem #f05633;
+}
+/* 
+.landing {
+    position: relative; */
+    /* this is the wrapper, the fixed image is going to be fixed inside
+    of the relative wrapper which will scroll up with the rest of the page*/
+    /* width: 100%;
+    height: 100vh;
+    display: table; */
+    /* display table to avoid some white space in mobile devices when scrolling at 
+    the end of the image */
+    /* z-index: -1; */
+    /* the landing class parent element will always be behind the child element with 
+    the actual bg image */
+/* } */
 
- .home-wrap {
-    clip: rect(0, auto, auto, 0);
-    /* kind of background position */
+/* .home-wrap {
+clip: rect(0, auto, auto, 0);
+/* kind of background position */
+/* position: absolute;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0; */
+/* top and left 0 is so that the bg img covers all the corners in mobile devices */
+/* } */
+
+/* landing page caption */
+.caption {
+    z-index: 1;
     position: absolute;
-    height: 100%;
+    top: 38%;
+    /* z-index to make sure it displays on top of the bg img  */
+    /* 20% from top of the page */
     width: 100%;
-    top: 0;
-    left: 0;
-    /* top and left 0 is so that the bg img covers all the corners in mobile devices */
- }
+    max-width: 100%;
+    /* so that text doesn't slide out when we shrink the screen  */
+}
 
- /* landing page caption */
- .caption {
-     z-index: 1;
-     position: absolute;
-     top: 38%;
-     /* z-index to make sure it displays on top of the bg img  */
-     /* 20% from top of the page */
-     width: 100%;
-     max-width: 100%;
-     /* so that text doesn't slide out when we shrink the screen  */
- }
+.services,
+.services-examples {
+padding: 0 1em; 
+}
 
- .services,
- .services-examples {
-    padding: 0 1em; 
-  }
+.services {
+background-color: #f4f4f4;
+}
 
-  .services {
-    background-color: #f4f4f4;
-  }
+.services-content,
+.services-examples-content,
+.technologies-content {
+margin-top: 1.5rem;
+}
 
-  .services-content,
-  .services-examples-content,
-  .technologies-content {
-    margin-top: 1.5rem;
-  }
+.services-content h5,
+.resources h5 {
+font-weight: 400;
+line-height: 2rem;
+}
 
-  .services-content h5,
-  .resources h5 {
-    font-weight: 400;
-    line-height: 2rem;
-  }
+.services-content h2,
+.services-examples-content h2,
+.services h4 {
+    font-weight: 200;
+    color: #ff6b49;
+}
 
-  .services-content h2,
-  .services-examples-content h2,
-  .services h4 {
-      font-weight: 200;
-      color: #ff6b49;
-  }
+.services-description {
+    margin-left: 6rem;
+}
+
+.services-description-web {
+    margin-right: 7rem;
+}
 
 .fa-laptop-code {
     color: #5bbad5;
@@ -318,12 +326,27 @@ h4 {
 
 /* Devices under 992px (lg) */
 @media (max-width: 991.98px) {
-    
+
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .services-description {
+        margin-left: 0rem;
+    }
+
+    .services-description-web {
+        margin-right: 0rem;
+    }
  }
  
  /* Devices under 768px (md) */
  @media (max-width: 767.98px) {
-    
+    .services-description-web {
+        margin-right: 0rem;
+    }
  }
  
  /* Devices under 576px (sm) */
@@ -341,5 +364,20 @@ h4 {
         margin-top: 0;
     }
 
+    .main-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .main-content {
+        margin-top: 0rem;
+    }
+
+    .services-description {
+        margin-left: 0rem;
+    }
+
+    .services-description-web {
+        margin-right: 0rem;
+    }
    
  }
