@@ -49,16 +49,18 @@ html, body {
     padding-top: 0.8rem;
 }
 
-.navbar .nav-link:active,
-.navbar .nav-link:hover {
-    color: white;
+
+.navbar-nav span:active,
+.navbar-nav span:hover {
+    border-bottom: 3px solid black;
+    padding-bottom: 1.2rem;
 }
 
 .navbar-nav button:hover,
-.main-content .btns:hover {
-    color: #000;
+.main-content .btns:hove
+    color: #fff;
     /* background-color: rgba(0, 0, 0, 0.7); */
-    background-color: rgba(255,255,255);
+    background-color: #323232;
 }
 
 .custom-toggler-icon {
@@ -78,7 +80,7 @@ button:focus, a:focus, a.btn:focus {
 }
 
 button, a, a.btn, .svg-inline--fa {
-    transition: all .6s ease;
+    /* transition: all .6s ease; */
 }
 
 .btns {
@@ -351,6 +353,12 @@ line-height: 2rem;
  
  /* Devices under 576px (sm) */
  @media (max-width: 575.98px) {
+
+    .navbar-nav span:active,
+    .navbar-nav span:hover {
+    border-bottom: 3px solid black;
+    padding-bottom: 0rem;
+}
     .services p,
     .services-examples p {
         font-size: 1.25rem;

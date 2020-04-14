@@ -5,8 +5,11 @@ THIS FILE USES PHPMAILER INSTEAD OF THE PHP MAIL() FUNCTION
 */
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 require './PHPMailer-master/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 /*
 *  CONFIGURE EVERYTHING HERE
@@ -51,7 +54,7 @@ try
     $emailTextHtml .= "</table><hr>";
     $emailTextHtml .= "<p>Have a great day!<br><br>Sincerely,<br><br>w3newbie Theme</p>";
     
-    $mail = new PHPMailer;
+    $mail = new PHPMailer(true);
 
 //************** IMPORTANT
 
@@ -68,7 +71,7 @@ try
 
 $mail->IsSMTP();
                 $mail->SMTPAuth='true';
-                $mail->SMTPSecure = 'ssl';
+                $mail->SMTPSecure =  PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = "587"; // 8025, 587 and 25 can also be used. Use Port 465 for SSL.
                 
