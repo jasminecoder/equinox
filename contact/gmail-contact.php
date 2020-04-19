@@ -9,6 +9,9 @@ require './PHPMailer-master/vendor/autoload.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 
+$x = PHPMailer::ENCRYPTION_STARTTLS;
+var_dump($x);
+
 function configureMailerSMTPSettings($mailer) {
     $mailer->IsSMTP();
     $mailer->SMTPAuth='true';
