@@ -4,8 +4,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './PHPMailer-master/vendor/autoload.php';
-// require 'vendor/autoload.php';
+// require './PHPMailer-master/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 
